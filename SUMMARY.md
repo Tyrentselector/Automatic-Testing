@@ -8,4 +8,5 @@
   * [3.3. ATDD验收测试驱动开发](chapter2/what_ATDD.md)
 * [4. 软件测试术语](chapter1/README.md)
 * [5. 测试工具](chapter2/README.md)
+  * [5.1 Karma](chapter3/Karma.md)
 
