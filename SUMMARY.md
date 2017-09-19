@@ -7,5 +7,5 @@
     * [ATDD验收测试驱动开发](chapter2/what_ATDD.md)
     * [TDD测试驱动开发](chapter2/what_TDD.md)
 * [软件测试术语](chapter1/README.md)
-* [自动化测试框架](chapter2/README.md)
+* [测试工具](chapter2/README.md)
 
