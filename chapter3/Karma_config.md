@@ -10,7 +10,10 @@
 $ karma init my.conf.js
 
 Which testing framework do you want to use?
+你想要使用那个测试框架？
+
 Press tab to list possible options. Enter to move to the next question.
+按下Tab键显示可选列表。Enter键进行下一步。
 > mocha
 
 Do you want to use Require.js?
