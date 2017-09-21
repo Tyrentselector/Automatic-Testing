@@ -23,3 +23,4 @@ $ npm install karma --save-dev
 # 安装项目所需插件:
 $ npm install karma-mocha karma-coverage --save-dev
 ```
+npm会把karma karma-mocha karam-coverage 包安装到当前工作目录中**node_modules**目录中，同时将作为依赖项保存到**package.json**中的**devDependencies**字段中。
