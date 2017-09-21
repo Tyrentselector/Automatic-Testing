@@ -22,5 +22,4 @@ $ npm install karma --save-dev
 
 # 安装项目所需插件:
 $ npm install karma-mocha karma-coverage --save-dev
-
 ```
