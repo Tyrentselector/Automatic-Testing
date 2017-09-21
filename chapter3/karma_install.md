@@ -8,7 +8,6 @@ karma可以通过插件与多种测试框架配合使用。karma运行在node.js
 
 > 注意：karma可以在 Node.js 0.10, 0.12.x, 4.x, 5.x, 6.x, 和 7.x中运行。
 
------
 
 ## 安装karma及插件
 
@@ -27,7 +26,7 @@ npm会把karma karma-mocha karam-coverage 包安装到当前工作目录中**nod
 # 运行 Karma:
 $ ./node_modules/karma/bin/karma start
 ```
------
+
 ## 命令行接口
 
 每次输入*./node_modules/karma/bin/karma start*是不是很不爽？如果你想在windows系统中随时通过命令行启动karma只需要执行：
