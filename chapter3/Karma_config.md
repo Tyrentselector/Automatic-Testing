@@ -11,7 +11,7 @@ $ karma init my.conf.js
 
 Which testing framework do you want to use?
 Press tab to list possible options. Enter to move to the next question.
-> jasmine
+> mocha
 
 Do you want to use Require.js?
 This will add Require.js plugin.
