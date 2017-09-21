@@ -32,7 +32,7 @@ Press tab to list possible options. Enter empty string to move to the next quest
 >
 
 What is the location of your source and test files?
-请输入你的源文件及测试文件路径？
+你的源文件及测试文件路径所处位置？
 You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".
 Press Enter to move to the next question.
 > *.js
