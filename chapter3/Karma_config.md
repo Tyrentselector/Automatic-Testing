@@ -20,6 +20,7 @@ Do you want to use Require.js?
 This will add Require.js plugin.
 这将会添加 Require.js 插件
 Press tab to list possible options. Enter to move to the next question.
+按下Tab键显示可选列表。Enter键进行下一步。
 > no
 
 Do you want to capture a browser automatically?
