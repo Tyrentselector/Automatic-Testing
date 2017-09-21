@@ -29,7 +29,7 @@ npm会把karma karma-mocha karam-coverage 包安装到当前工作目录中**nod
 $ ./node_modules/karma/bin/karma start
 ```
 -----
-### 命令行接口
+## 命令行接口
 
 每次输入*./node_modules/karma/bin/karma start*是不是很不爽？如果你想在windows系统中随时通过命令行启动karma只需要执行：
 
