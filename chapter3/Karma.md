@@ -35,6 +35,7 @@ $ ./node_modules/karma/bin/karma start
 -----
 
 每次输入*./node_modules/karma/bin/karma start*是不是很不爽？如果你想在windows系统中随时通过命令行启动karma只需要执行：
+
 ```
 $ npm install -g karma-cli
 ```
