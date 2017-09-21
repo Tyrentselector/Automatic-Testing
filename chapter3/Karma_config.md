@@ -48,6 +48,7 @@ Press Enter to move to the next question.
 >
 
 Do you want Karma to watch all the files and run the tests on change?
+是否希望karma检测到文件变动后自动运行测试？
 Press tab to list possible options.
 > yes
 
