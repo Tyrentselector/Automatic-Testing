@@ -12,4 +12,6 @@ karma可以通过插件与多种测试框架配合使用。karma运行在node.js
 
 > 注意：karma可以在 Node.js 0.10, 0.12.x, 4.x, 5.x, 6.x, 和 7.x中运行。
 
+### 安装karma及插件
+
 1. 安装karma及其插件
