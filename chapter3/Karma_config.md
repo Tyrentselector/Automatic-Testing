@@ -6,7 +6,7 @@
 
 通过**karma init**我们可以快速创建一个配置文件：
 
-```js
+```
 $ karma init my.conf.js
 
 Which testing framework do you want to use?
@@ -32,7 +32,7 @@ Press tab to list possible options. Enter empty string to move to the next quest
 >
 
 What is the location of your source and test files?
-
+请输入你的源文件及测试文件路径？
 You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".
 Press Enter to move to the next question.
 > *.js
