@@ -16,8 +16,9 @@ Press tab to list possible options. Enter to move to the next question.
 > mocha
 
 Do you want to use Require.js?
-
+是否使用 Require.js？
 This will add Require.js plugin.
+这将会添加 Require.js 插件
 Press tab to list possible options. Enter to move to the next question.
 > no
 
