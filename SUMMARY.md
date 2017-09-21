@@ -6,6 +6,7 @@
   * [3.1. TDD测试驱动开发](chapter2/what_TDD.md)
     * [3.1.1. TDD开发周期](chapter2/what_TDD/311.md)
     * [3.1.2. 增量开发](chapter2/what_TDD/312-zeng-liang-kai-fa.md)
+    * [3.1.3. 重构保持代码质量](chapter2/what_TDD/313-zhong-gou-bao-chi-dai-ma-zhi-liang.md)
   * [3.2. BDD行为驱动开发](chapter2/what_BDD.md)
   * [3.3. ATDD验收测试驱动开发](chapter2/what_ATDD.md)
 * [4. 软件测试术语](chapter1/README.md)
