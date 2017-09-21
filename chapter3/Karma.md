@@ -31,7 +31,7 @@ npm会把karma karma-mocha karam-coverage 包安装到当前工作目录中**nod
 # 运行 Karma:
 $ ./node_modules/karma/bin/karma start
 ```
-
+-----
 ### 命令行接口
 
 -----
