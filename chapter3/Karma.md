@@ -21,6 +21,6 @@ karma可以通过插件与多种测试框架配合使用。karma运行在node.js
 $ npm install karma --save-dev
 
 # 安装项目所需插件:
-$ npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev
+$ npm install karma-mocha karma-chrome-launcher --save-dev
 
 ```
