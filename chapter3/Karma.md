@@ -4,6 +4,12 @@
 karma可以通过插件与多种测试框架配合使用。karma运行在node.js环境上，可以通过NPM获取。
 
 ## 安装
- 
-1. [安装nodejs](https://nodejs.org/en/)
+
+### 安装node.js
+
+-----
+我们推荐Mac和linux通过[NVM](https://github.com/creationix/nvm)安装node.js
+[安装nodejs](https://nodejs.org/en/)
+
+
 1. 安装karma及其插件
