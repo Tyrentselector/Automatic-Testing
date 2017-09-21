@@ -53,6 +53,7 @@ Press tab to list possible options.
 > yes
 
 Config file generated at "/Users/vojta/Code/karma/my.conf.js".
+配置文件已经生成，路径"/Users/vojta/Code/karma/my.conf.js"。
 ```
 
 
