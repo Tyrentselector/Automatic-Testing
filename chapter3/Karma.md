@@ -17,9 +17,10 @@ karma可以通过插件与多种测试框架配合使用。karma运行在node.js
 我们推荐将karma安装到项目目录本地。
 
 ```
-# Install Karma:
+// Install Karma:
 $ npm install karma --save-dev
 
-# Install plugins that your project needs:
+// Install plugins that your project needs:
 $ npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev
+
 ```
