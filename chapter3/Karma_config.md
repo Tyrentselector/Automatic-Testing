@@ -55,6 +55,6 @@ Press tab to list possible options.
 Config file generated at "/Users/vojta/Code/karma/my.conf.js".
 配置文件已经生成，路径"/Users/vojta/Code/karma/my.conf.js"。
 ```
-
+我们可以手动编写配置文件或者从其他项目拷贝一份。
 
 
