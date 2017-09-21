@@ -24,7 +24,10 @@ Press tab to list possible options. Enter to move to the next question.
 > no
 
 Do you want to capture a browser automatically?
+是否希望自动指定一个浏览器？
 Press tab to list possible options. Enter empty string to move to the next question.
+按下Tab键显示可选列表。Enter键进行下一步。
+
 > Chrome
 > Firefox
 >
