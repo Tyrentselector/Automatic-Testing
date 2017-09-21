@@ -34,6 +34,7 @@ Press tab to list possible options. Enter empty string to move to the next quest
 What is the location of your source and test files?
 你的源文件及测试文件路径所处位置？
 You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".
+你能够是用 glob 模式，例如 "js/*.js" 或 "test/**/*Spec.js"。
 Press Enter to move to the next question.
 > *.js
 > test/**/*.js
