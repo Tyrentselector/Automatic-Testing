@@ -41,4 +41,5 @@ $ npm install -g karma-cli
 ```
 
 这样你就可以通过简单的**karma**命令在任何地方运行karma了，同时它总是运行本地版本。
+
 -----
