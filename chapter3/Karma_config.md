@@ -41,7 +41,7 @@ Press Enter to move to the next question.
 >
 
 Should any of the files included by the previous patterns be excluded?
-通过之前匹配模式匹配到的文件是否有需要排除掉的？
+通过之前匹配模式匹配到的文件，是否有需要排除掉的？
 You can use glob patterns, eg. "**/*.swp".
 Press Enter to move to the next question.
 >
