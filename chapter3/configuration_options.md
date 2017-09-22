@@ -45,8 +45,9 @@ CLI：--auto-watch, --no-auto-watch
 {
   // 期望输出那个等级的日志
   level:  string,
-  // 版式字符串，%b, %t, %T, %m，分别被浏览器字符串，小写日志类型，大写日志类型和日志消息替换，同时会产生一个输出文件，路径为输出文件的输出路径。
+  // 版式字符串，%b, %t, %T, %m，分别被浏览器字符串，小写日志类型，大写日志类型和日志消息替换，格式化器只会影响到输出文件。
   format: string, 
+  
   path:   string,
   terminal: boolean
 }
