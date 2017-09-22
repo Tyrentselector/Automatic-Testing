@@ -54,6 +54,11 @@ CLI：--auto-watch, --no-auto-watch
 }
 ```
 
+### 浏览器异常链接容忍
+
+类型：Number
+默认值：0
+描述：可容忍失去链接次数。
 
 
 
