@@ -44,7 +44,7 @@ CLI：--auto-watch, --no-auto-watch
 ```
 {
   level:  string, // 期望输出那个等级的日志
-  format: string,
+  format: string, // 版式字符串，%b, %t, %T, %m，分别被浏览器字符串，小写日志类型，大写日志类型和日志消息替换，同时会产生一个输出文件，路径为输出文件的输出路径。
   path:   string,
   terminal: boolean
 }
