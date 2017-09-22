@@ -176,3 +176,85 @@ customHeaders: [{
 }]
 ```
 
+### detached
+
+类型：Boolean
+默认值：false
+CLI：--detached
+描述：当为 true 时将会在一个新线程中开启 karma 服务器，控制台不写入输出。这个服务器可以通过 **karma stop** 命令停止服务。
+
+### exclude
+
+类型：Array
+默认值：[]
+描述：要排除文件的一个文件列表或匹配模式。
+
+### failOnEmptyTestSuite
+
+类型：Boolean
+默认值：true
+CLI：--fail-on-empty-test-suite, --no-fail-on-empty-test-suite
+描述：开启或禁用，当运行空测试套件时失败。如果禁用程序会返回一个退出代码**0**并且展示一个警告。
+
+### files
+
+类型：Array
+默认值：[]
+描述：需要在浏览器中加载的文件的文件列表或匹配方式
+
+### forceJSONP
+
+类型：Boolean
+默认值：false
+描述：强制 socket.io 使用 JSONP 轮询替代 XHR 轮询。
+
+### frameworks
+
+类型：Array
+默认值：[]
+描述：你想要使用的测试框架列表。你可能会设置为['jasmine'], ['mocha'] 或 ['qunit'] 等等。
+>以上所有的测试框架或插件都需要通过Npm进行安装后才能使用。
+
+### listenAddress
+
+类型：string
+默认值：'0.0.0.0' 或 LISTEN_ADDR
+描述：服务器监听地址。变更为“localhost”仅监听回路，或“::”监听所有IPv6接口。
+
+### hostname
+
+类型：string
+默认值：localhost
+描述：hostname 在捕获浏览器时使用。
+
+### httpsServerOptions
+
+类型：对象
+默认值：{}
+描述：选项对象会被 Node 的 https 类使用。
+
+### logLevel
+
+类型：Constant
+默认值：config.LOG_INFO
+CLI: --log-level debug
+**可选值：**
+* config.LOG_DISABLE
+* config.LOG_ERROR
+* config.LOG_WARN
+* config.LOG_INFO
+* config.LOG_DEBUG
+
+描述：日志等级
+
+### loggers
+
+类型：Array
+默认值：[{type: 'console'}]
+描述：日志输出源要使用的列表，更多信息详见[log4js](https://github.com/nomiddlename/log4js-node)
+
+### middleware
+
+类型：Array
+默认值:[]
+描述：karma 服务器需要使用的附加中间件名称列表。中间件会按照列出顺序使用。
