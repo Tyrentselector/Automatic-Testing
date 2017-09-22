@@ -77,4 +77,4 @@ CLI：--browsers Chrome,Firefox, --no-browsers
   * **PhantomJS** (加载器需要 requires karma-phantomjs-launcher 插件)
   * **Firefox** (加载器需要 karma-firefox-launcher 插件)
   * **Opera** (加载器需要 karma-opera-launcher 插件)
-  * **IE** (launcher requires karma-ie-launcher plugin)
+  * **IE** (加载器需要 karma-ie-launcher 插件)
