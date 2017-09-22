@@ -58,7 +58,7 @@ CLI：--auto-watch, --no-auto-watch
 
 类型：Number
 默认值：0
-描述：可容忍失去链接次数。
+描述：浏览器与Karma服务器链接异常容忍失次数。
 
 
 
