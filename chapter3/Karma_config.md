@@ -83,5 +83,6 @@ module.exports = function(config) {
   });
 };
 ```
+## 文件匹配模式
 
-
+所有制定文件路径的配置选项，使用[minimatch](https://github.com/isaacs/minimatch)库进匹配你想引入或排除的文件。
