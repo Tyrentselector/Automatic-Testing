@@ -81,7 +81,7 @@ CLI：--browsers Chrome,Firefox, --no-browsers
 * **IE** \(加载器需要 karma-ie-launcher 插件\)
 * **Safari** \(加载器需要 requires karma-safari-launcher 插件\)
   
-描述：加载和捕获浏览器列表。当Karma启动后，它会启动在配置中配置所有浏览器。在Karma关闭的同时这些浏览器也会随之关闭。你可以打开浏览器并访问Karma web 服务器(http://localhost:9876/)手动不惑任何浏览器。
+描述：加载和捕获浏览器列表。当Karma启动后，它会启动在配置中配置所有浏览器。在Karma关闭的同时这些浏览器也会随之关闭。你可以打开浏览器并访问Karma web 服务器\(http://localhost:9876/) 手动捕获任何浏览器。
 
 见[config/browsers](https://karma-runner.github.io/1.0/config/browsers.html)来获取更多信息。通过 [plugins](https://karma-runner.github.io/1.0/config/plugins.html) 可以定义其他加载器。
 
