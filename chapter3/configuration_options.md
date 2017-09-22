@@ -102,5 +102,5 @@ CLI：所有参数前加--（只有再运行 karma run 时生效）
 
 类型：Boolean
 默认值：true
-描述：在新窗口或iFrame中运行测试
+描述：在新窗口或iFrame中运行测试，为true时Karma在iFrame中运行测试，如果为false则在新窗口中运行。
 
