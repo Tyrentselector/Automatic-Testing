@@ -164,4 +164,15 @@ CLI：--colors，--no-colors
 类型：Array
 默认值：undefined
 描述：自定义 HTTP 头会通过 Karma 的 web 服务器设置在服务文件中。它是十分有用的一个配置，尤其是对于即将到来的一些浏览器功能例如Service Workers。
+**customHeaders** 允许为正则表达式匹配到的文件设定 HTTP 头。**customHeaders** 是一个包含以下属性的对象数组：
+* match：用于匹配文件的正则表达式
+* name：HTTP 响应头字段名
+* **例如：**
+```
+customHeaders: [{
+  match: '.*foo.html',
+  name: 'Service-Worker-Allowed',
+  value: '/'
+}]
+```
 
