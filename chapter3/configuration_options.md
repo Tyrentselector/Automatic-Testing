@@ -49,6 +49,7 @@ CLI：--auto-watch, --no-auto-watch
   format: string, 
   // path 为输出文件的输出路径。
   path:   string,
+  // terminal 表示日志是否写入终端
   terminal: boolean
 }
 ```
