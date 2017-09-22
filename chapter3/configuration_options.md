@@ -38,7 +38,17 @@ CLI：--auto-watch, --no-auto-watch
 
 ### 浏览器控制台日志输出配置
 
-
+类型：对象
+默认值：{level: "debug", format: "%b %T: %m", terminal: true}
+描述：配置浏览器控制台如何输出日志，以下属性均为可选项：
+```
+{
+  level:  string,
+  format: string,
+  path:   string,
+  terminal: boolean
+}
+```
 
 
 
