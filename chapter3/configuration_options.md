@@ -139,7 +139,7 @@ CLI：--colors，--no-colors
 
 类型：Boolean
 默认值：true
-描述：当为 true 时将会添加 crossorigin 属性到生成的 script 标签中。为跨域 js 文件提供更好的错误报告。当你加载额外的不需要**Access-Control-Allow-Origin**请求头的 script 脚本时可以禁用这个选项。
+描述：当为 true 时将会添加 crossorigin 属性到生成的 script 标签中。为跨域 js 文件提供更好的错误报告。当你加载额外的 script 脚本并且这些脚本不需要**Access-Control-Allow-Origin**请求头的时可以禁用这个选项。
 
 
 
