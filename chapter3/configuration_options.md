@@ -98,5 +98,9 @@ CLI：--browsers Chrome,Firefox, --no-browsers
 CLI：所有参数前加--（只有再运行 karma run 时生效）
 描述：在命令行中执行**karma run**并传入额外参数，它们作为**karma.config.args**通过测试适配器被传入。**client.args**选项允许你设定除了**run**之外的动作值。至于这些值如何被用于你的测试适配器，你可以通过设配器获取相关信息。
 
+### client.useIframe
 
+类型：Boolean
+默认值：true
+描述：在新窗口或iFrame中运行测试
 
