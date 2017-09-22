@@ -120,4 +120,11 @@ CLI：所有参数前加--（只有再运行 karma run 时生效）
 
 类型： Boolean
 默认值：true
-描述：如果为 true Karma 在完成测试后清空window环境上下文
+描述：如果为 true Karma 在完成测试后清空window环境上下文。
+
+### colors
+
+类型：Boolean
+默认值：true
+CLI：--colors，--no-colors
+描述：
