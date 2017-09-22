@@ -60,5 +60,7 @@ CLI：--auto-watch, --no-auto-watch
 默认值：0
 描述：浏览器与Karma服务器链接异常容忍失次数。
 
+### 浏览器激活超时
+
 
 
