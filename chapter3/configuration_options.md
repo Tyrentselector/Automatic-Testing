@@ -258,4 +258,4 @@ CLI: --log-level debug
 类型：Array
 默认值:[]
 描述：karma 服务器需要使用的附加中间件名称列表。中间件会按照列出顺序使用。
-你必须通过 npm 安装你所需的中间件。通过 [plugins](chapter3/karma_install.md)更多信息。
+你必须通过 npm 安装你所需的中间件。通过 [plugins](karma_install.md)更多信息。
