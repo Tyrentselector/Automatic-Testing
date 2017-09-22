@@ -92,3 +92,8 @@ module.exports = function(config) {
 * **exclude**
 * **files**
 * **preprocessors**
+
+例如：
+
+* ** \*\*/*.js **: 子目录中所有以js为扩展名的文件
+* ** \*\*/!(jquery).js: 同上个例子相同，但是不包含“jquery.js”
