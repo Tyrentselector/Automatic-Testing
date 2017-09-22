@@ -43,12 +43,13 @@ CLI：--auto-watch, --no-auto-watch
 描述：配置浏览器控制台如何输出日志，以下属性均为可选项：
 ```
 {
-  level:  string,
+  level:  string, // 期望输出那个等级的日志
   format: string,
   path:   string,
   terminal: boolean
 }
 ```
+
 
 
 
