@@ -12,7 +12,7 @@ CLI：--auto-watch, --no-auto-watch
 
 描述：启用或关闭，监听文件变更后自动执行测试功能。
 
-### 自动监听延迟
+### autoWatchBatchDelay
 
 类型：Number
 
