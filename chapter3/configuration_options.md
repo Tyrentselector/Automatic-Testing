@@ -159,3 +159,8 @@ CLI：--colors，--no-colors
 默认值：null
 描述：如果为null，karma会使用自己的client_with_context.html文件（这个文件会在 client.runInParent 设置为 true 时使用）。
 
+### customHeaders
+
+类型：Array
+默认值：undefined
+描述：自定义 HTTP 头会通过 Karma 的 web 服务器设置在服务文件中。它是十分有用的一个配置，尤其是对于即将到来的一些浏览器功能例如Service Workers
