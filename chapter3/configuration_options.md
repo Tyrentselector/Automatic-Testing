@@ -326,4 +326,24 @@ CLI：--port 9876
 类型：Array
 默认值：['progress']
 描述：要使用的报告列表
-其他的报告器，例如 **growl, junit, teamcity 或 coverage** 能够通过[插件](karma_plugins.md)加载
+其他的报告器，例如 **growl, junit, teamcity 或 coverage** 能够通过[插件](karma_plugins.md)加载。
+
+### restartOnFileChange
+
+类型：Boolean
+默认值： false
+描述：karma 监听文件改变，它会在当前测试执行完毕后开始一个新的测试。restartOnFileChange 为 true 时，当 karma 监听到文件改变后立即取消当前执行测试然后开始一个新的测试。
+
+### retryLimit
+
+类型：Number
+默认值：2
+描述：当浏览器宕机后，karma 会尝试重现新加载浏览器。这个参数标识 karma 尝试重新加载的次数。
+
+### singleRun
+
+类型：Boolean
+默认值：false
+CLI：--single-run, --no-single-run
+描述：持续集成模式。
+如果为 true，karma将会开启并捕获所有配置的浏览器，运行测试，然后根据测试结果返回 0 或 1，0 表示所有测试全部通过，1 表示有测试失败了。
