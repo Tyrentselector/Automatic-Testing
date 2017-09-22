@@ -258,4 +258,52 @@ CLI: --log-level debug
 类型：Array
 默认值:[]
 描述：karma 服务器需要使用的附加中间件名称列表。中间件会按照列出顺序使用。
-你必须通过 npm 安装你所需的中间件。通过 [plugins](karma_install.md)更多信息。
+你必须通过 npm 安装你所需的中间件。通过 [plugins](karma_plugins.md)更多信息。
+
+这种插件必须提供一个 express/connect 中间件函数（更多细节请参考 [Express 文档](https://expressjs.com/en/guide/using-middleware.html)）。自定义内联中间件如下所示：
+```
+var CustomMiddlewareFactory = function (config) {
+  return function (request, response, /* next */) {
+    response.writeHead(200)
+    return response.end("content!")
+  }
+}
+middleware: ['custom']
+plugins: [
+  {'middleware:custom': ['factory', CustomMiddlewareFactory]}
+  ...
+]
+```
+
+### mime
+
+类型：Object
+默认值：{}
+描述：从新定义文件扩展名到 MIME-Type 的默认映射。属性设定为所需的 MIME，提供一个扩展名列表作为值。
+**Example：**
+```
+mime: {
+   'text/x-typescript': ['ts','tsx']
+   'text/plain' : ['mytxt']
+}
+```
+### plugins
+
+类型：Array
+默认值：['karma-*']
+描述：加载插件列表。一个插件可以是一个字符串或一个内联插件对象。默认情况下，Karma 会加载 modules 目录下所有以 **karma-\*** 开头的组件。
+参考[plugins](karma_plugins.md)获取更多信息。
+
+### port
+
+类型：Number
+默认值：9876
+CLI：--port 9876
+描述：web 服务监听端口。
+
+### processKillTimeout
+
+类型：Number
+默认子：2000
+描述：在发送 SIGKILL 信号前 karma 等待浏览器进程终止时长，
+如果在测试执行完成后，或 Karma 视图关闭浏览器，浏览器在 processKillTimeout 规定时间内没有关闭，Karma 将会发送 SIGKILL 信号尝试强制关闭浏览器。
