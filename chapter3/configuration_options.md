@@ -38,9 +38,10 @@ CLI：--auto-watch, --no-auto-watch
 
 ### browserConsoleLogOptions
 
-类型：对象
-默认值：{level: "debug", format: "%b %T: %m", terminal: true}
+类型：对象  
+默认值：{level: "debug", format: "%b %T: %m", terminal: true}  
 描述：配置浏览器控制台如何输出日志，以下属性均为可选项：
+
 ```
 {
   // level 期望输出那个等级的日志
@@ -56,27 +57,31 @@ CLI：--auto-watch, --no-auto-watch
 
 ### browserDisconnectTolerance
 
-类型：Number
-默认值：0
+类型：Number  
+默认值：0  
 描述：浏览器与Karma服务器链接异常容忍失次数。
 
 ### browserNoActivityTimeout
 
-类型：Number
-默认值：10000
+类型：Number  
+默认值：10000  
 描述：在与浏览器断开链接前，karma等待浏览器响应最大时常。如果在测试执行期间，Karma在browserNoActivityTimeout指定时间内没有接收到任何来自浏览器的消息时将会与浏览器断开链接。
 
 ### browsers
 
-类型：Array
-默认值：[]
-CLI：--browsers Chrome,Firefox, --no-browsers
+类型：Array  
+默认值：\[\]  
+CLI：--browsers Chrome,Firefox, --no-browsers  
 **可能值：**
 
-  * **Chrome** (加载器需要 karma-chrome-launcher 插件)
-  * **PhantomJS** (加载器需要 requires karma-phantomjs-launcher 插件)
-  * **Firefox** (加载器需要 karma-firefox-launcher 插件)
-  * **Opera** (加载器需要 karma-opera-launcher 插件)
-  * **IE** (加载器需要 karma-ie-launcher 插件)
-  * **Safari** (加载器需要 requires karma-safari-launcher 插件)
+* **Chrome** \(加载器需要 karma-chrome-launcher 插件\)
+* **PhantomJS** \(加载器需要 requires karma-phantomjs-launcher 插件\)
+* **Firefox** \(加载器需要 karma-firefox-launcher 插件\)
+* **Opera** \(加载器需要 karma-opera-launcher 插件\)
+* **IE** \(加载器需要 karma-ie-launcher 插件\)
+* **Safari** \(加载器需要 requires karma-safari-launcher 插件\)
+  
 描述：
+
+
+
