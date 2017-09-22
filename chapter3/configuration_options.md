@@ -80,51 +80,54 @@ CLI：--browsers Chrome,Firefox, --no-browsers
 * **Opera** \(加载器需要 karma-opera-launcher 插件\)
 * **IE** \(加载器需要 karma-ie-launcher 插件\)
 * **Safari** \(加载器需要 requires karma-safari-launcher 插件\)
-  
-描述：加载和捕获浏览器列表。当Karma启动后，它会启动在配置中配置所有浏览器。在Karma关闭的同时这些浏览器也会随之关闭。你可以打开浏览器并访问Karma web 服务器 http://localhost:9876/ 手动捕获任何浏览器。
+
+描述：加载和捕获浏览器列表。当Karma启动后，它会启动在配置中配置所有浏览器。在Karma关闭的同时这些浏览器也会随之关闭。你可以打开浏览器并访问Karma web 服务器 [http://localhost:9876/](http://localhost:9876/) 手动捕获任何浏览器。
 
 见[config/browsers](https://karma-runner.github.io/1.0/config/browsers.html)来获取更多信息。通过 [plugins](https://karma-runner.github.io/1.0/config/plugins.html) 可以定义其他加载器。使用**--no-browsers**命令行选项可以用空列表覆盖配置文件中的值。
 
 ### captureTimeout
 
-类型：Number
-默认值：60000
+类型：Number  
+默认值：60000  
 描述：捕获浏览器超时时长。captureTimeout 值代表Karma允许浏览器启动并链接到Karma服务器的最大时常。如果任何浏览器在规定时间内没有被捕获到。将会再一次进行链接，在尝试三次后Karma会放弃尝试。
 
 ### client.args
 
-类型：Array
-默认值：undefined
-CLI：所有参数前加--（只有再运行 karma run 时生效）
+类型：Array  
+默认值：undefined  
+CLI：所有参数前加--（只有再运行 karma run 时生效）  
 描述：在命令行中执行**karma run**并传入额外参数，它们作为**karma.config.args**通过测试适配器被传入。**client.args**选项允许你设定除了**run**之外的动作值。至于这些值如何被用于你的测试适配器，你可以通过设配器获取相关信息。
 
 ### client.useIframe
 
-类型：Boolean
-默认值：true
+类型：Boolean  
+默认值：true  
 描述：在新窗口或iFrame中运行测试，为true时Karma在iFrame中运行测试，如果为false则在新窗口中运行。
 
 ### client.runInParent
 
-类型：Boolean
-默认值：false
+类型：Boolean  
+默认值：false  
 描述：在当前客户端同一窗口中运行测试，不使用iFrame或开启新窗口。
 
 ### client.captureConsole
 
-类型：Boolean
-默认值：true
+类型：Boolean  
+默认值：true  
 描述：捕获所有控制台输出并发送到终端中。
 
 ### client.clearContext
 
-类型： Boolean
-默认值：true
+类型： Boolean  
+默认值：true  
 描述：如果为 true Karma 在完成测试后清空window环境上下文。
 
 ### colors
 
-类型：Boolean
-默认值：true
-CLI：--colors，--no-colors
-描述：
+类型：Boolean  
+默认值：true  
+CLI：--colors，--no-colors  
+描述：开启或禁用输出报告或日志中的颜色
+
+
+
