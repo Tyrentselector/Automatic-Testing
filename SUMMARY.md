@@ -13,6 +13,8 @@
   * [5.1 Karma](chapter3/README.md)
     * [5.1.1 安装Karma](chapter3/karma_install.md)
     * [5.1.2 配置Karma](chapter3/Karma_config.md)
+    * [5.1.2.1 文件匹配](chapter3/file_patterns.md)
+    * [5.1.2.3 配置选项](chapter3/configuration_options.md)
 * [4. 软件测试术语](chapter1/README.md)
 * [6. TDD入门](chapter4/README.md)
   * [6.1. 从需求到测试](chapter4/demand2test.md)
