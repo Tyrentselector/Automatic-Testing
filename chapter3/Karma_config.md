@@ -71,6 +71,8 @@ Karma 配置文件可以使用 JavaScript、CoffeeScript，TypeScript编写并�
 * **./.config/karma.conf.coffee**
 * **./.config/karma.conf.ts**
 
+配置文件内部，配置代码全部在**module.exports**指向的一个接受一个配置对象的函数中。
+
 ```
 // karma.conf.js
 module.exports = function(config) {
