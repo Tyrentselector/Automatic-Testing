@@ -64,6 +64,6 @@ CLI：--auto-watch, --no-auto-watch
 
 类型：Number
 默认值：10000
-描述：
+描述：在与浏览器断开链接前，karma等待浏览器响应最大时常。
 
 
