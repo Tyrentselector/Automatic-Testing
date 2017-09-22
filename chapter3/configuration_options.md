@@ -28,7 +28,7 @@ CLI：--auto-watch, --no-auto-watch
 
 描述：用于定义**files**和**exclude**相对路径的根路径，如果basePath为相对路径那么它将会被转换为配置文件所在路径**\_\_dirname**。
 
-### 浏览器离线超时
+### browserDisconnectTimeout
 
 类型：Number
 
