@@ -1,4 +1,4 @@
-# 配置选项
+### 配置选项
 
 以下包涵所有可用配置选项。
 
@@ -128,6 +128,18 @@ CLI：所有参数前加--（只有再运行 karma run 时生效）
 默认值：true  
 CLI：--colors，--no-colors  
 描述：开启或禁用输出报告或日志中的颜色
+
+### concurrency
+
+类型：Number
+默认值：Infinity
+描述：Karma同时加载浏览器个数
+
+### crossOriginAttribute
+
+类型：Boolean
+默认值：true
+描述：当为 true 时将会添加 crossorigin 属性到生成的 script 标签中。为跨域 js 文件提供更好的错误报告。当你加载额外的不需要**Access-Control-Allow-Origin**请求头的 script 脚本时可以禁用这个选项。
 
 
 
