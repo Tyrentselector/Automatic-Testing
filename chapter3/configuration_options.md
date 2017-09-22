@@ -90,3 +90,8 @@ CLI：--browsers Chrome,Firefox, --no-browsers
 类型：Number
 默认值：60000
 描述：捕获浏览器超时时长。captureTimeout 值代表Karma允许浏览器启动并链接到Karma服务器的最大时常。如果任何浏览器在规定时间内没有被捕获到。将会再一次进行链接，在尝试三次后Karma会放弃尝试。
+
+### client.args
+类型：Array
+默认值：undefined
+CLI：所有参数后--（只有再运行 karma run 时生效）
