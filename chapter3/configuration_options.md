@@ -47,7 +47,7 @@ CLI：--auto-watch, --no-auto-watch
   level:  string,
   // format 版式字符串，%b, %t, %T, %m，分别被浏览器字符串，小写日志类型，大写日志类型和日志消息替换，格式化器只会影响到输出文件。
   format: string, 
-  //path 为输出文件的输出路径。
+  // path 为输出文件的输出路径。
   path:   string,
   terminal: boolean
 }
