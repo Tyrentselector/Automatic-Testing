@@ -36,7 +36,7 @@ CLI：--auto-watch, --no-auto-watch
 
 描述：Karma等待浏览器重连时常。
 
-### 浏览器控制台日志输出配置
+### browserConsoleLogOptions
 
 类型：对象
 默认值：{level: "debug", format: "%b %T: %m", terminal: true}
