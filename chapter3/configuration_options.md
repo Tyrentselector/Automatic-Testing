@@ -71,5 +71,7 @@ CLI：--auto-watch, --no-auto-watch
 类型：Array
 默认值：[]
 CLI：--browsers Chrome,Firefox, --no-browsers
+**可能值：**
 
+  * **Chrome** (需要 karma-chrome-launcher 插件)
 
