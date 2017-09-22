@@ -104,3 +104,8 @@ CLI：所有参数前加--（只有再运行 karma run 时生效）
 默认值：true
 描述：在新窗口或iFrame中运行测试，为true时Karma在iFrame中运行测试，如果为false则在新窗口中运行。
 
+### client.runInParent
+
+类型：Boolean
+默认值：false
+描述：在当前客户端同一窗口中运行测试，不使用iFrame或开启新窗口。
