@@ -71,6 +71,15 @@ Karma 配置文件可以使用 JavaScript、CoffeeScript，TypeScript编写并�
 * **./.config/karma.conf.coffee**
 * **./.config/karma.conf.ts**
 
-
+```
+// karma.conf.js
+module.exports = function(config) {
+  config.set({
+    basePath: '../..',
+    frameworks: ['jasmine'],
+    //...
+  });
+};
+```
 
 
