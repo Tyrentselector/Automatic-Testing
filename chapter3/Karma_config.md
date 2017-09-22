@@ -1,6 +1,7 @@
 # 配置
 
 通过配置文件可以让karma了解你的项目从而提供更好的服务，本章阐述了如何创建一个配置文件。
+
 > 大多数适配器、报告器、预处理器和加载器框架都需要以插件的形式引入。
 
 ## 创建配置文件
@@ -56,8 +57,20 @@ Press tab to list possible options.
 Config file generated at "/Users/vojta/Code/karma/my.conf.js".
 配置文件已经生成，路径"/Users/vojta/Code/karma/my.conf.js"。
 ```
+
 我们可以手动编写配置文件或者从其他项目拷贝一份。
 
 Karma 配置文件可以使用 JavaScript、CoffeeScript，TypeScript编写并且作为一个标准node模块加载。
+
+如果不提供参数，Karma将会以一下顺序搜索配置文件：
+
+* **./karma.conf.js**
+* **./karma.conf.coffee**
+* **./karma.conf.ts**
+* **./.config/karma.conf.js**
+* **./.config/karma.conf.coffee**
+* **./.config/karma.conf.ts**
+
+
 
 
