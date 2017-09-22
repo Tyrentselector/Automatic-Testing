@@ -79,3 +79,4 @@ CLI：--browsers Chrome,Firefox, --no-browsers
   * **Opera** (加载器需要 karma-opera-launcher 插件)
   * **IE** (加载器需要 karma-ie-launcher 插件)
   * **Safari** (加载器需要 requires karma-safari-launcher 插件)
+描述：
