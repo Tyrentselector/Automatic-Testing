@@ -85,4 +85,8 @@ CLI：--browsers Chrome,Firefox, --no-browsers
 
 见[config/browsers](https://karma-runner.github.io/1.0/config/browsers.html)来获取更多信息。通过 [plugins](https://karma-runner.github.io/1.0/config/plugins.html) 可以定义其他加载器。使用**--no-browsers**命令行选项可以用空列表覆盖配置文件中的值。
 
+### captureTimeout
 
+类型：Number
+默认值：60000
+描述：捕获浏览器超时时长。
