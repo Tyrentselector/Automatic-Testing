@@ -73,5 +73,6 @@ CLI：--auto-watch, --no-auto-watch
 CLI：--browsers Chrome,Firefox, --no-browsers
 **可能值：**
 
-  * **Chrome** (需要 karma-chrome-launcher 插件)
-
+  * **Chrome** (加载器需要 karma-chrome-launcher 插件)
+  * **PhantomJS** (加载器需要 requires karma-phantomjs-launcher 插件)
+  * **Firefox** (加载器需要 karma-firefox-launcher 插件)
