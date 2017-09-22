@@ -64,6 +64,8 @@ CLI：--auto-watch, --no-auto-watch
 
 类型：Number
 默认值：10000
-描述：在与浏览器断开链接前，karma等待浏览器响应最大时常。如果在测试执行期间，Karma在
+描述：在与浏览器断开链接前，karma等待浏览器响应最大时常。如果在测试执行期间，Karma在browserNoActivityTimeout指定时间内没有接收到任何来自浏览器的消息时将会与浏览器断开链接。
+
+
 
 
