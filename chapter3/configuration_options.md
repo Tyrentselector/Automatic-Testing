@@ -163,4 +163,4 @@ CLI：--colors，--no-colors
 
 类型：Array
 默认值：undefined
-描述：自定义 HTTP 头会通过 Karma 的 web 服务器设置在服务文件中。它是十分有用的一个配置，尤其是对于即将到来的一些浏览器功能例如Service Workers
+描述：自定义 HTTP 头会通过 Karma 的 web 服务器设置在服务文件中。它是十分有用的一个配置，尤其是对于即将到来的一些浏览器功能例如Service Workers。
