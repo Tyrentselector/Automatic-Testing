@@ -141,7 +141,21 @@ CLI：--colors，--no-colors
 默认值：true
 描述：当为 true 时将会添加 crossorigin 属性到生成的 script 标签中。为跨域 js 文件提供更好的错误报告。当你加载额外的 script 脚本并且这些脚本不需要**Access-Control-Allow-Origin**请求头的时可以禁用这个选项。
 
+### customContextFile
 
+类型：string
+默认值：null
+描述：如果为null，karma会使用自己的context.html文件。
 
+### customDebugFile
 
+类型：string
+默认值：null
+描述：如果为null，karma会使用自己的debug.html文件。
+
+### customClientContextFile
+
+类型：string
+默认值：null
+描述：如果为null，karma会使用自己的client_with_context.html文件（这个文件会在 client.runInParent 设置为 true 时使用）。
 
