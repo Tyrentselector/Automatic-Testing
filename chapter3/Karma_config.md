@@ -122,15 +122,11 @@ CLI：--auto-watch, --no-auto-watch
 
 描述：该配置项告诉Karma在监听到文件发生变更后再次运行测试等待时常。
 
-
-
 ### 根路径
 
 类型：String
 
 默认值：' '
 
-
-
-
+描述：用于定义**files**和**exclude**相对路径的根路径，
 
