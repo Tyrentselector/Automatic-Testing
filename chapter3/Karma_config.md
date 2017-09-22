@@ -98,3 +98,7 @@ module.exports = function(config) {
 * ** \*\*/*.js **: 所有子目录中所有以js为扩展名的文件
 * ** \*\*/!(jquery).js: 同上个例子相同，但是不包含“jquery.js”
 * **\*\*/(foo|bar).js**: 所有子目录中，所有“foo.js”和“bar.js”文件
+
+## 配置选项
+
+以下包涵所有可用配置选项。
