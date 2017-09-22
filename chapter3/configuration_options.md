@@ -307,3 +307,23 @@ CLI：--port 9876
 默认子：2000
 描述：在发送 SIGKILL 信号前 karma 等待浏览器进程终止时长，
 如果在测试执行完成后，或 Karma 视图关闭浏览器，浏览器在 processKillTimeout 规定时间内没有关闭，Karma 将会发送 SIGKILL 信号尝试强制关闭浏览器。
+
+### preprocessors
+
+类型：Object
+默认值：{'**/*.coffee': 'coffee'}
+描述：一个将要使用预处理器的映射。
+预处理器可能会改变运行时可用文件的文件类型及内容，例如如果你对你的源文件使用了 “coverage” 预处理器，当你试着交互式的调试你的测试时，你会发现你的源代码已经完全改变了，因为你想要处理这些文件以至于你在“reporters”列表中自动构建并使用了 “coverage” 预处理器入口，但是你的交互式调试没有。
+
+### reportSlowerThan
+
+类型：Number
+默认值：0
+描述：karma 将会报告所有比给定时间慢的测试。默认情况是禁用的。
+
+### reporters
+
+类型：Array
+默认值：['progress']
+描述：要使用的报告列表
+其他的报告器，例如 **growl, junit, teamcity 或 coverage** 能够通过[插件](karma_plugins.md)加载
