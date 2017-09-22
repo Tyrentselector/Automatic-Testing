@@ -20,7 +20,7 @@ CLI：--auto-watch, --no-auto-watch
 
 描述：该配置项告诉Karma在监听到文件发生变更后再次运行测试等待时常。
 
-### 根路径
+### basePath
 
 类型：String
 
