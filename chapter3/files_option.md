@@ -27,3 +27,8 @@ files 选项决定了那些文件由浏览器引入那些文件由 karma 服务�
 * 类型：Boolean
 * 默认值： true
 * 如果 **autowatch** 为 **true** 所有 **watched** 设置为 **true** 的匹配到的文件都会被 karma 监听 。
+
+**included**
+* 类型：Boolean
+* 默认值：true
+* 描述：匹配文件是否通过 **script** 标签引入浏览器，如果为 **false** 表示需要手动引入例如[Require.js](require.js.md)
