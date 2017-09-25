@@ -71,7 +71,7 @@ files: [
 
 # 加载资产
 
-默认情况下所有资产由 **http://localhost:[PORT]/base/** 提供。
+默认情况下所有资产由 ```http://localhost:[PORT]/base/``` 提供。
 
 例如加载图片：
 ```
