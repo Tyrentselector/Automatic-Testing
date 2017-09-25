@@ -88,4 +88,4 @@ proxies: {
   "/img/": "http://localhost:8080/base/test/images/"
 },
 ```
-现在你可以通过 **http://localhost:8080/img/[MY IMAGE].jpg** 访问 **test/images** 中图片
+现在你可以通过 ```http://localhost:8080/img/[MY IMAGE].jpg``` 访问 **test/images** 中图片
