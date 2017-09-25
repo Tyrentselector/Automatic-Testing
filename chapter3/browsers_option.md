@@ -55,4 +55,13 @@ customLaunchers: {
 }
 ```
 
-可以为任意浏览器加载器指定一个 ```displayName``` 这个字段值会替换报告中的用户代理。下面一个代码片段展示了如何为一个加载器设置 ```displayName```
+可以为任意浏览器加载器指定一个 ```displayName``` 这个字段值会替换报告中的用户代理。下面一个代码片段展示了如何为一个加载器设置 ```displayName```。
+```
+customLaunchers: {
+  chrome_without_security: {
+    base: 'Chrome',
+    flags: ['--disable-web-security'],
+    displayName: 'Chrome w/o security'
+  }
+}
+```
