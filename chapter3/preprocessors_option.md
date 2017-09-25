@@ -8,3 +8,9 @@ preprocessors: {
   '**/*.html': ['html2js']
 },
 ```
+
+# 可用预处理器
+
+* [coffee](https://github.com/karma-runner/karma-coffee-preprocessor)
+* [html2js](https://github.com/karma-runner/karma-html2js-preprocessor)
+* [coverage](https://github.com/karma-runner/karma-coverage)
