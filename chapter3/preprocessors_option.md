@@ -20,3 +20,4 @@ preprocessors: {
 # Mini matching
 
 ```preprocessors``` 配置对象的键用于过滤 ```files``` 中匹配到的文件。
+例如路径 ```/my/absolute/path/to/test/unit/file.coffee``` 根据 ```**/*.coffee``` 进行匹配会返回 true，但根据 ```*.coffee```
