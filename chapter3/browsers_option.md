@@ -29,4 +29,13 @@ module.exports = function(config) {
   });
 };
 ```
-同时请注意，```browsers``` 选项默认为空。
+同时请注意，```browsers``` 选项默认为空数组。
+
+# 配置加载器
+
+某些加载器是可配置的
+```
+sauceLabs: {
+  username: 'michael_jackson'
+}
+```
