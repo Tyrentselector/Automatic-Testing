@@ -26,4 +26,4 @@ files 选项决定了那些文件由浏览器引入那些文件由 karma 服务�
 **watched**
 * 类型：Boolean
 * 默认值： true
-* 如果 **autowatch** 为 **true** 所有 **watched** 设置为 **true** 的匹配到的文件发生变化是都会被 karma 监听 。
+* 如果 **autowatch** 为 **true** 所有 **watched** 设置为 **true** 的匹配到的文件都会被 karma 监听 。
