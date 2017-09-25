@@ -31,4 +31,14 @@ files 选项决定了那些文件由浏览器引入那些文件由 karma 服务�
 **included**
 * 类型：Boolean
 * 默认值：true
-* 描述：匹配文件是否通过 **script** 标签引入浏览器，如果为 **false** 表示需要手动引入例如[Require.js](require.js.md)
+* 描述：匹配文件是否通过 **script** 标签引入浏览器，如果为 **false** 表示需要手动引入例如[Require.js](require.js.md)。
+
+**served**
+* 类型：Boolean
+* 默认值：true
+* 描述：文件是否由 Karma web 服务器提供
+
+**nocache**
+* 类型：Boolean
+* 默认值：false
+* 描述：是否每次都通过 karma web 服务获取文件。
