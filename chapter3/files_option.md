@@ -80,7 +80,7 @@ files: [
 ],
 ```
 通过 glob 匹配特定的图片资源。**watched** 及 **included** 对于图片是不必要的。然而，无论如何它们必须由服务器提供。
-可以通过 **http://localhost:[PORT]/base/test/images/[MY IMAGE].jpg** 访问图片。
+可以通过 ```http://localhost:[PORT]/base/test/images/[MY IMAGE].jpg``` 访问图片。
 在URL中的 **base** 是 **basePath** 的引用，无需替换为你自己的 **base**。
 此外你可以使用代理：
 ```
