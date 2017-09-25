@@ -321,6 +321,28 @@ CLI：--port 9876
 默认值：0
 描述：karma 将会报告所有比给定时间慢的测试。默认情况是禁用的。
 
+### proxies
+
+类型：Object
+默认值：{}
+描述：路径代理映射。
+代理可通过目标 url 或路径直接指定，或者可以通过一个对象配置更多选项。可用选项如下：；
+* **target** 目标 url 或路径。
+* **changeOrigin** 代理是否使用目标主机复写 **Host header** 默认为 **false**。
+
+示例：
+```
+proxies: {
+  '/static': 'http://gstatic.com',
+  '/web': 'http://localhost:9000',
+  '/img/': '/base/test/images/',
+  '/proxyfied': {
+    'target': 'http://myserver.localhost',
+    'changeOrigin': true
+  }
+},
+```
+
 ### reporters
 
 类型：Array
