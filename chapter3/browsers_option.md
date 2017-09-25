@@ -29,3 +29,4 @@ module.exports = function(config) {
   });
 };
 ```
+同时请注意，```browsers``` 选项默认为空。
