@@ -16,3 +16,7 @@ preprocessors: {
 * [coverage](https://github.com/karma-runner/karma-coverage)
 * [ng-html2js](https://github.com/karma-runner/karma-ng-html2js-preprocessor)
 * [更多](https://www.npmjs.com/browse/keyword/karma-preprocessor)
+
+# Mini matching
+
+```preprocessors``` 配置对象的键用于过滤 ```files``` 中匹配到的文件。
