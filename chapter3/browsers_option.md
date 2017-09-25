@@ -15,3 +15,17 @@ karma 将会自动捕获这些浏览器，并在测试完成后自动关闭它�
 * [SauceLabs](https://www.npmjs.com/package/karma-saucelabs-launcher)
 * [BrowserStack](https://www.npmjs.com/package/karma-browserstack-launcher)
 * [所有加载器](https://www.npmjs.com/browse/keyword/karma-launcher)
+
+例如添加 Firefox 到测试套件中：
+```
+# 通过 Npm 安装加载器
+$ npm install karma-firefox-launcher --save-dev
+```
+然后在你的配置文件 ```browsers``` 配置项数组中添加浏览器名称。
+```
+module.exports = function(config) {
+  config.set({
+    browsers : ['Chrome', 'Firefox']
+  });
+};
+```
