@@ -14,3 +14,5 @@ preprocessors: {
 * [coffee](https://github.com/karma-runner/karma-coffee-preprocessor)
 * [html2js](https://github.com/karma-runner/karma-html2js-preprocessor)
 * [coverage](https://github.com/karma-runner/karma-coverage)
+* [ng-html2js](https://github.com/karma-runner/karma-ng-html2js-preprocessor)
+* [更多](https://www.npmjs.com/browse/keyword/karma-preprocessor)
