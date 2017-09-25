@@ -43,4 +43,49 @@ files 选项决定了那些文件由浏览器引入那些文件由 karma 服务�
 * 默认值：false
 * 描述：是否每次都通过 karma web 服务获取文件。
 
-完整示例
+# 完整示例
+
+以下展示了一个完整示例：
+```
+files: [
+
+  // Detailed pattern to include a file. Similarly other options can be used
+  { pattern: 'lib/angular.js', watched: false },
+  // Prefer to have watched false for library files. No need to watch them for changes
+
+  // simple pattern to load the needed testfiles
+  // equal to {pattern: 'test/unit/*.spec.js', watched: true, served: true, included: true}
+  'test/unit/*.spec.js',
+
+  // this file gets served but will be ignored by the watcher
+  // note if html2js preprocessor is active, reference as `window.__html__['compiled/index.html']`
+  {pattern: 'compiled/index.html', watched: false},
+
+  // this file only gets watched and is otherwise ignored
+  {pattern: 'app/index.html', included: false, served: false},
+
+  // this file will be served on demand from disk and will be ignored by the watcher
+  {pattern: 'compiled/app.js.map', included: false, served: true, watched: false, nocache: true}
+],
+```
+
+# 加载资产
+
+默认情况下所有资产由 **http://localhost:[PORT]/base/** 提供。
+
+例如加载图片：
+```
+files: [
+  {pattern: 'test/images/*.jpg', watched: false, included: false, served: true, nocache: false}
+],
+```
+通过 glob 匹配特定的图片资源。**watched** 及 **included** 对于图片是不必要的。然而，无论如何它们必须由服务器提供。
+可以通过 **http://localhost:[PORT]/base/test/images/[MY IMAGE].jpg** 访问图片。
+在URL中的 **base** 是 **basePath** 的引用，无需替换为你自己的 **base**。
+此外你可以使用代理：
+```
+proxies: {
+  "/img/": "http://localhost:8080/base/test/images/"
+},
+```
+现在你可以通过 **http://localhost:8080/img/[MY IMAGE].jpg** 访问 **test/images** 中图片
