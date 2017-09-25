@@ -65,3 +65,4 @@ customLaunchers: {
   }
 }
 ```
+如果像上面一样配置，浏览器在日志与报告中被表示为 ```Chrome w/o security```。
