@@ -39,3 +39,18 @@ sauceLabs: {
   username: 'michael_jackson'
 }
 ```
+
+定义一个配置加载器
+```
+customLaunchers: {
+  chrome_without_security: {
+    base: 'Chrome',
+    flags: ['--disable-web-security']
+  },
+  sauce_chrome_win: {
+    base: 'SauceLabs',
+    browserName: 'chrome',
+    platform: 'windows'
+  }
+}
+```
