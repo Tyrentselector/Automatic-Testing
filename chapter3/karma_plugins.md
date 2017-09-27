@@ -23,3 +23,15 @@ npm install karma-<plugin name> --save-dev
 # 加载插件
 
 默认情况下 Karma 加载所有 npm 模块下所有以 ```karma-*``` 开头的兄弟模块。
+同时你也可以通过 ```plugins``` 配置指定想要加载的模块。这个配置值可以是一个字符串或者个对象：
+```
+plugins: [
+  // Karma will require() these plugins
+  'karma-jasmine',
+  'karma-chrome-launcher'
+
+  // inlined plugins
+  {'framework:xyz': ['factory', factoryFn]},
+  require('./plugin-required-from-config')
+]
+```
