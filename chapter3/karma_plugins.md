@@ -35,3 +35,5 @@ plugins: [
   require('./plugin-required-from-config')
 ]
 ```
+
+这里有一些[现有模块](https://npmjs.org/browse/keyword/karma-plugin)。
