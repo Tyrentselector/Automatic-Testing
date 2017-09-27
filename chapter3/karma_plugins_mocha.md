@@ -33,4 +33,10 @@ describe('Array', function() {
 在命令行中执行
 ```
 $ mocha
+
+$ Array
+$    #indexOf()
+$      √ should return -1 when the value is not present
+
+$  1 passing (13ms)
 ```
