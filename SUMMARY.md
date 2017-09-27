@@ -18,7 +18,7 @@
     * [5.2.3. files 配置选项](chapter3/files_option.md)
     * [5.2.4. Browsers 配置选项](chapter3/browsers_option.md)
     * [5.2.5 Preprocessors 预处理器](chapter3/preprocessors_option.md)
-  * [5.3 Plugins 插件](chapter3/plugins.md)
+  * [5.3 Plugins 插件](chapter3/karma_plugins.md)
 * [6. TDD入门](chapter4/README.md)
   * [6.1. 从需求到测试](chapter4/demand2test.md)
   * [6.2. 第一个测试](chapter4/first_test.md)
