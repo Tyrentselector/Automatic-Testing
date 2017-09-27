@@ -92,3 +92,15 @@ describe('#find()', function() {
 });
  ```
  > 之后的示例将使用[Chai as Promised](karma_plugins_chai_promise.md)进行流畅的 promise 断言。
+ 在 Mocha 3.0.0 以上版本，返回一个 *Promise* 同时调用 *done()* 将会导致一个异常：
+ ```
+ const assert = require('assert');
+
+it('should complete this test', function (done) {
+  return new Promise(function (resolve) {
+    assert.ok(true);
+    resolve();
+  })
+    .then(done);
+});
+ ```
