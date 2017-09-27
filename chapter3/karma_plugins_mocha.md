@@ -105,3 +105,4 @@ it('should complete this test', function (done) {
     .then(done);
 });
  ```
+ 上面的测试会抛出一个异常，```Error: Resolution method is overspecified. Specify a callback *or* return a Promise; not both.```。
