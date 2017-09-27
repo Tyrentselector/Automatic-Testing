@@ -73,3 +73,7 @@ describe('User', function() {
   });
 });
 ```
+
+## 使用 Promises
+
+ 你可以选择返回 Promise 对象，来替代 ```done()``` 回调函数。在你测试 API 返回 promise 对象而不是接受一个回掉函数时十分有用。 
