@@ -32,5 +32,5 @@ describe('Array', function() {
 
 在命令行中执行
 ```
-mocha
+$ mocha
 ```
