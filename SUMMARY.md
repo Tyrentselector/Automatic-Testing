@@ -21,7 +21,7 @@
   * [5.3 Plugins 插件](chapter3/karma_plugins.md)
     * [5.3.1 Launcher 加载器](chapter3/karma_plugins_launcher.md)
     * [5.3.2 Mocha 测试框架](chapter3/karma_plugins_mocha.md)
-    * [5.3.3 Mocha-reporter 报告生成器](chapter3/karma_plugins_mocha_reporter.md)
+    * [5.3.3 reporter 报告生成器](chapter3/karma_plugins_reporter.md)
     * [5.3.4 Chai 断言库](chapter3/karma_plugins_assert.md)
     * [5.3.5 RequireJS](chapter3/karma_plugins_requirejs.md)
   * [5.4 Requirejs](chapter3/karma_requirejs.md)
