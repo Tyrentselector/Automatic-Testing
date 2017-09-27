@@ -14,4 +14,5 @@ $ npm install --save-dev mocha
 ```
 $ npm install mocha
 $ mkdir test
+$ $EDITOR test/test.js # or open with your favorite editor
 ```
