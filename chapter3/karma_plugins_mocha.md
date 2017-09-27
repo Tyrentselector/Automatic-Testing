@@ -62,3 +62,14 @@ describe('User', function() {
   });
 });
 ```
+为了让事情更加简单，我们使用 ```done()``` 回调函数时可以接受一个错误异常，所我我们可以直接使用：
+```
+describe('User', function() {
+  describe('#save()', function() {
+    it('should save without error', function(done) {
+      var user = new User('Luna');
+      user.save(done);
+    });
+  });
+});
+```
