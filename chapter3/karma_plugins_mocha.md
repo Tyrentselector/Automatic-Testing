@@ -91,4 +91,4 @@ describe('#find()', function() {
   });
 });
  ```
- > 之后的示例将使用[Chai as Promised ]()进行流畅的 promise 断言。
+ > 之后的示例将使用[Chai as Promised]()进行流畅的 promise 断言。
