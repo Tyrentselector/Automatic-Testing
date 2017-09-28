@@ -128,18 +128,22 @@ Mocha 默认为 BDD 风格测试口，它提供了一组钩子 ```before(), afte
 describe('hooks', function() {
 
   before(function() {
+    // 在当前代码块中所有测试运行前执行
     // runs before all tests in this block
   });
 
   after(function() {
+    // 在当前代码块中所有测试运行后执行
     // runs after all tests in this block
   });
 
   beforeEach(function() {
+    // 在当前代码块中每个测试运行前执行
     // runs before each test in this block
   });
 
   afterEach(function() {
+    // 在当前代码块中每个测试运行后执行
     // runs after each test in this block
   });
 
