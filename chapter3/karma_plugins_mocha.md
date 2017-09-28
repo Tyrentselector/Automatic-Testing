@@ -107,3 +107,16 @@ it('should complete this test', function (done) {
  ```
  上面的测试会抛出一个异常，```Error: Resolution method is overspecified. Specify a callback *or* return a Promise; not both.```。
  
+# 同步代码测试
+
+当测试同步代码，触发回调函数，Mocha 将会自动进行下一个测试。
+```
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function() {
+      [1,2,3].indexOf(5).should.equal(-1);
+      [1,2,3].indexOf(0).should.equal(-1);
+    });
+  });
+});
+```
