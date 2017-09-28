@@ -150,3 +150,20 @@ describe('hooks', function() {
   // test cases
 });
 ```
+
+## 对钩子的描述
+
+每个钩子都可以传入一个可选的描述信息，它可以帮助你更准确的定位测试中的错误，如果钩子的回调函数是一个命名函数那么会使用它的函数名，否则会使用所提供的描述参数：
+```
+beforeEach(function() {
+  // beforeEach hook
+});
+
+beforeEach(function namedFun() {
+  // beforeEach:namedFun
+});
+
+beforeEach('some description', function() {
+  // beforeEach:some description
+});
+```
