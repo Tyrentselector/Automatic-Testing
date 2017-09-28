@@ -120,3 +120,7 @@ describe('Array', function() {
   });
 });
 ```
+
+# 钩子
+
+Mocha 默认为 BDD 风格测试口，它提供了一组钩子 ```before(), after(), beforeEach(), afterEach()``` 。
