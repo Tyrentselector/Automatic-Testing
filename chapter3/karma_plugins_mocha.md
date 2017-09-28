@@ -123,4 +123,26 @@ describe('Array', function() {
 
 # 钩子
 
-Mocha 默认为 BDD 风格测试口，它提供了一组钩子 ```before(), after(), beforeEach(), afterEach()``` 。
+Mocha 默认为 BDD 风格测试口，它提供了一组钩子 ```before(), after(), beforeEach(), afterEach()``` 。这些钩子可以用于创建预制条件并且在测试完成后清理它们。
+```
+describe('hooks', function() {
+
+  before(function() {
+    // runs before all tests in this block
+  });
+
+  after(function() {
+    // runs after all tests in this block
+  });
+
+  beforeEach(function() {
+    // runs before each test in this block
+  });
+
+  afterEach(function() {
+    // runs after each test in this block
+  });
+
+  // test cases
+});
+```
