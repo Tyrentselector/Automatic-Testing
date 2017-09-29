@@ -369,4 +369,26 @@ describe('Array', function() {
 
 # 除己测试
 
-与排他测试 *.only()* 相反。通过添加 *.skip()*，忽略那些套件或用例。任何标记为 *skip* 的测试都会归类为[待测试](# 待测试用例)
+与排他测试 *.only()* 相反。通过添加 *.skip()*，忽略那些套件或用例。任何标记为 *skip* 的测试都会归类为[待测试](# 待测试用例)下面是一个跳过整个测试套件的例子：
+```
+describe('Array', function() {
+  describe.skip('#indexOf()', function() {
+    // ...
+  });
+});
+```
+
+跳过某个测试用例：
+```
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it.skip('should return -1 unless present', function() {
+      // this test will not be run
+    });
+
+    it('should return the index when present', function() {
+      // this test will be run
+    });
+  });
+});
+```
