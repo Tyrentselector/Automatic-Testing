@@ -155,7 +155,7 @@ describe('hooks', function() {
 });
 ```
 
-## 对钩子的描述
+## 对钩子函数的描述
 
 每个钩子都可以传入一个可选的描述信息，它可以帮助你更准确的定位测试中的错误，如果钩子的回调函数是一个命名函数那么会使用它的函数名，否则会使用所提供的描述参数：
 ```
@@ -171,3 +171,202 @@ beforeEach('some description', function() {
   // beforeEach:some description
 });
 ```
+
+## 异步钩子函数
+
+所有的钩子函数可能是同步的也可能是异步的，例如你想在测试前使用虚假数据填充数据库：
+```
+let database = {};
+function saveData(data, done) {
+    setTimeout(function() {
+        for (key in data) {
+            database[key] = data[key];
+        }
+        console.log('log-----:data has saved!!');
+        done();
+    }, 1000);
+}
+
+function readData(key, cb) {
+    setTimeout(function() {
+        cb(database[key]);
+    }, 1000);
+}
+
+let joh = {name: 'joh', age: 11};
+let tim = {name: 'tim', age: 12};
+let yeo = {name: 'yeo', age: 22};
+beforeEach((done) => {
+    console.log('log-----:begin save data!!');
+    saveData([joh, tim, yeo], done);
+});
+
+
+describe('save data', () => {
+    describe('read data', () => {
+        it('respond with matching records', (done) => {
+            readData(2, function(data) {
+                console.log(`log-----: find data!!`, data);
+                done();
+            });
+        });
+        it('get matched data', () => {
+            console.log(`log-----: data has get road!!`);
+        });
+    });
+})
+```
+
+## root-level 钩子函数
+
+你可以选择在任意文件中添加跟 **root-level** 钩子函数。例如，在所有 describe 代码块外部添加 ```forEach()```。这时无论在那个文件中的测试，将都会调用 ```forEach()```。
+```
+// test1.js
+describe('save data', () => {
+    it('begin save data', () => {
+        console.log('log-----:data has saved!!');
+    });
+});
+
+// test2.js
+let test = require('./test1');
+
+beforeEach(() => {
+    console.log('log-----:begin save data!!');
+});
+
+describe('read data', () => {
+    it('respond with matching records', () => {
+        console.log(`log-----: find data!!`);
+    });
+    it('get matched data', () => {
+        console.log(`log-----: data has get road!!`);
+    });
+})
+```
+
+## 延迟跟套件
+
+如果你需要在你的测试套件运行前执行一些一部操作，你可以延迟跟套件执行。执行 mocha 时附加 --delay 参数。将会得到一个全局回调函数 run():
+```
+setTimeout(function() {
+  // do some setup
+
+  describe('my suite', function() {
+    // ...
+  });
+
+  run();
+}, 5000);
+```
+> 增加 --delay 参数后必须调用 run()。
+
+# 待测试
+
+待测试——没有提供回调函数的测试用例（最终会补全这个测试）：
+```
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    // pending test below
+    it('should return -1 when the value is not present');
+  });
+});
+```
+待测试同样会生成测试报告。
+
+# 排他测试
+
+通过添加 *.only()* 来调用函数排他属性允许你只运行指定的测试套件或测试用例。一个只执行指定测试套件的例子：
+```
+describe('Array', function() {
+    describe.only('should execute suite', function() {
+      // ...
+      it('should execute case');
+    });
+    describe('should not execute suite', function() {
+        // ...
+        it('should not execute case');
+      });
+  });
+  ```
+  > 所有内部嵌套的套件依然会执行。
+
+  一个只执行指定测试用例的例子：
+  ```
+  describe('Array', function() {
+  describe('#indexOf()', function() {
+    it.only('should return -1 unless present', function() {
+      // ...
+    });
+
+    it('should return the index when present', function() {
+      // ...
+    });
+  });
+});
+```
+
+在3.0.0及后续版本中，*.only()* 可多次使用来指定多个需要测试的子集:
+```
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it.only('should return -1 unless present', function() {
+      // this test will be run
+    });
+
+    it.only('should return the index when present', function() {
+      // this test will also be run
+    });
+
+    it('should return -1 if called with a non-Array context', function() {
+      // this test will not be run
+    });
+  });
+});
+```
+
+你也可以选择多个测试套件：
+```
+describe('Array', function() {
+  describe.only('#indexOf()', function() {
+    it('should return -1 unless present', function() {
+      // this test will be run
+    });
+
+    it('should return the index when present', function() {
+      // this test will also be run
+    });
+  });
+
+  describe.only('#concat()', function () {
+    it('should return a new Array', function () {
+      // this test will also be run
+    });
+  });
+
+  describe('#slice()', function () {
+    it('should return a new Array', function () {
+      // this test will not be run
+    });
+  });
+});
+```
+
+```
+describe('Array', function() {
+  describe.only('#indexOf()', function() {
+    it.only('should return -1 unless present', function() {
+      // this test will be run
+    });
+
+    it('should return the index when present', function() {
+      // this test will not be run
+    });
+  });
+});
+```
+> 如果有钩子函数，它依然会被执行。
+
+# 除己测试
+
+与排他测试 *.only()* 相反。通过添加 *.skip()*，忽略那些套件或用例。任何标记为 *skip* 的测试都会归类为[待测试](#待测试用例)
