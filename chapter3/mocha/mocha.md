@@ -494,3 +494,14 @@ $ mocha
 
 大多测试报告都会展示测试持续时间，来显示那些较慢完成的测试：
 ![](https://mochajs.org/images/reporter-spec-duration.png)
+
+改变 Mocha 对缓慢的认知，使用 ```this.slow()``` 方法：
+```
+describe('something slow', function() {
+  this.slow(10000);
+
+  it('should take long enough for me to go make a sandwich', function() {
+    // ...
+  });
+});
+```
