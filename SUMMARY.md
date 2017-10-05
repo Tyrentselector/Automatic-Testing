@@ -10,7 +10,7 @@
   * [3.2. BDD 行为驱动开发](chapter2/what_BDD.md)
   * [3.3. ATDD 验收测试驱动开发](chapter2/what_ATDD.md)
 * [4. 软件测试术语](chapter1/README.md)
-* [5.  测试工具](chapter3/README.md)
+* [5.  Karma](chapter3/README.md)
   * [5.1.  安装 Karma](chapter3/karma/karma_install.md)
   * [5.2.  配置 Karma](chapter3/karma/Karma_config.md)
     * [5.2.1. 文件匹配](chapter3/karma/file_patterns.md)
