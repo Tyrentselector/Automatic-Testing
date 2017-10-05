@@ -26,8 +26,8 @@
     * [5.4.4 Chai 断言库](chapter3/karma/plugins/karma_plugins_chai.md)
     * [5.4.5 Chai-as-promise 断言](chapter3/karma/plugins/karma_plugins_chai_promise.md)
     * [5.4.6 RequireJS](chapter3/karma/plugins/karma_plugins_requirejs.md)
-  * [5.5 Mocha](chapter3/mocha/mocha.md)
-* [6. TDD入门](chapter4/README.md)
-  * [6.1. 从需求到测试](chapter4/demand2test.md)
-  * [6.2. 第一个测试](chapter4/first_test.md)
+* [6. Mocha](chapter3/mocha/mocha.md)
+* [7. TDD入门](chapter4/README.md)
+  * [7.1. 从需求到测试](chapter4/demand2test.md)
+  * [7.2. 第一个测试](chapter4/first_test.md)
 
