@@ -392,3 +392,104 @@ describe('Array', function() {
   });
 });
 ```
+> 最佳实践：使用 ```.skip()``` 代替注释测试。
+
+你可能会在测试运行是用到 ```this.skip()```。如果一个测试需要环境或配置而你又无法事先得知这些预制条件，运行时 *skip* 对于这种情况十分适用。例如：
+```
+it('should only test in the correct environment', function() {
+  if (/* check test environment */) {
+    // make assertions
+  } else {
+    this.skip();
+  }
+});
+```
+上面测试会作为**待定测试**处理。调用 ```this.skip()``` 就是放弃当前测试。
+>最佳实践：为了避免歧义，不要在 ```this.skip()``` 后测试代码。
+
+与上面的测试进行对比：
+```
+it('should only test in the correct environment', function() {
+  if (/* check test environment */) {
+    // make assertions
+  } else {
+    // do nothing
+  }
+});
+```
+这个测试将会直接通过，因为在这个测试里没有任何测试逻辑。
+
+在 *before* 钩子函数中使用 ```this.skip()``` 跳过多个测试：
+```
+before(function() {
+  if (/* check test environment */) {
+    // setup code
+  } else {
+    this.skip();
+  }
+});
+```
+
+# 重试测试
+
+在测试失败后可以尝试再次进行重试测试。这个特性被设计用于端对端测试，这些端对端测试的资源模拟或入撞十分困难。**
+不推荐在单元测试中使用这个特性**。
+这个特性会重新执行 *beforeEach/afterEach* 钩子函数，不会重新执行 *before/after*。
+**注意：**以下实例使用 Selenium webdriver 书写：
+```
+describe('retries', function() {
+  // Retry all tests in this suite up to 4 times
+  this.retries(4);
+
+  beforeEach(function () {
+    browser.get('http://www.yahoo.com');
+  });
+
+  it('should succeed on the 3rd try', function () {
+    // Specify this test to only retry up to 2 times
+    this.retries(2);
+    expect($('.foo').isDisplayed()).to.eventually.be.true;
+  });
+});
+```
+
+# 动态生成测试
+
+给 Mocha 使用 ```Function.prototype.call``` 和函数表达式来定义测试套件和用例。可以直观动态的生成你的测试。无需任何特殊语法，直白的 javascript 就可以获得参数化的测试功能，这些测试你可能在其他框架中看到过。
+```
+var assert = require('chai').assert;
+
+function add() {
+  return Array.prototype.slice.call(arguments).reduce(function(prev, curr) {
+    return prev + curr;
+  }, 0);
+}
+
+describe('add()', function() {
+  var tests = [
+    {args: [1, 2],       expected: 3},
+    {args: [1, 2, 3],    expected: 6},
+    {args: [1, 2, 3, 4], expected: 10}
+  ];
+
+  tests.forEach(function(test) {
+    it('correctly adds ' + test.args.length + ' args', function() {
+      var res = add.apply(null, test.args);
+      assert.equal(res, test.expected);
+    });
+  });
+});
+```
+上面的代码将会生成一个含有三个测试用例测试套件：
+```
+$ mocha
+
+  add()
+    ✓ correctly adds 2 args
+    ✓ correctly adds 3 args
+    ✓ correctly adds 4 args
+```
+
+# 测试持续时间
+
+大多测试报告都会展示测试持续时间，来显示那些较慢完成的测试：
