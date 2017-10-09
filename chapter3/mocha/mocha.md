@@ -505,3 +505,45 @@ describe('something slow', function() {
   });
 });
 ```
+
+# 超时设定
+
+## 套件级
+
+套件级超时设定可以应用到整个测试套件，也可通过 ```this.timeout(0)``` 禁用超时设定。超时设定会被所有的嵌套测试套件，和测试用例继承。
+
+```
+describe('a suite of tests', function() {
+  this.timeout(500);
+
+  it('should take less than 500ms', function(done){
+    setTimeout(done, 300);
+  });
+
+  it('should take less than 500ms as well', function(done){
+    setTimeout(done, 250);
+  });
+})
+```
+
+## 测试用例级
+
+同样可以指定某个测试用例使用或禁用超时设定，同时可以覆盖父级测试指定的超时时间。
+```
+it('should take less than 500ms', function(done){
+  this.timeout(500);
+  setTimeout(done, 300);
+});
+```
+
+## 钩子函数级
+同样钩子函数也可以设定超时时间：
+```
+describe('a suite of tests', function() {
+  beforeEach(function(done) {
+    this.timeout(3000); // A very long environment setup.
+    setTimeout(done, 2500);
+  });
+});
+```
+使用 ```this.timeout(0)``` 禁用它。
