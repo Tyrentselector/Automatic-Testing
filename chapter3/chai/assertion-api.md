@@ -356,3 +356,269 @@ expect(true, 'nooo why fail??').to.be.false;
 
 ### .null
 
+断言目标是否严格等于 ```null```。
+```
+expect(true).to.be.null;
+```
+可以通过 ```.not``` 进行否定。最好断言目标等于期望值，而不是不等于 ```null```。
+```
+expect(1).to.equal(1); // Recommended
+expect(1).to.not.be.null; // Not recommended
+```
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect(42, 'nooo why fail??').to.be.null
+```
+
+### .undefined
+
+断言目标是否严格等于 ```undefined```。
+```
+expect(true).to.be.undefined;
+```
+可以通过 ```.not``` 进行否定。最好断言目标等于期望值，而不是不等于 ```undefined```。
+```
+expect(1).to.equal(1); // Recommended
+expect(1).to.not.be.undefined; // Not recommended
+```
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect(42, 'nooo why fail??').to.be.undefined;
+```
+
+### .NaN
+
+断言目标是否严格等于 ```NaN```。
+```
+expect(true).to.be.NaN;
+```
+可以通过 ```.not``` 进行否定。最好断言目标等于期望值，而不是不等于 ```undefined```。
+```
+expect('foo').to.equal('foo'); // Recommended
+expect('foo').to.not.be.NaN; // Not recommended
+```
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect(42, 'nooo why fail??').to.be.NaN;
+```
+
+### .exist
+
+断言目标是否严格不等于 ```null`` 或 ```undefined```。最好是断言目标等于期望值。
+```
+expect(1).to.equal(1); // Recommended
+expect(1).to.exist; // Not recommended
+
+expect(0).to.equal(0); // Recommended
+expect(0).to.exist; // Not recommended
+```
+使用 ```.not``` 否定 ```.exist```。
+```
+expect(null).to.be.null; // Recommended
+expect(null).to.not.exist; // Not recommended
+
+expect(undefined).to.be.undefined; // Recommended
+expect(undefined).to.not.exist; // Not recommended
+```
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect(null, 'nooo why fail??').to.exist;
+```
+
+### .empty
+
+当判定对象为字符串或数组时，```.empty``` 断言目标 ```length``` 属性是否严格等于（===）0。
+```
+expect([]).to.be.empty;
+expect('').to.be.empty;
+```
+
+当目标是 map 或 set 时，```.empty``` 断言目标 ```size``` 属性是否严格等于（===）0。
+```
+expect(new Set()).to.be.empty;
+expect(new Map()).to.be.empty;
+```
+
+当目标是一个非函数对象时，```.empty``` 断言对象是否拥有可枚举非继承属性。Symbol-based 类属性不计在内。
+```
+expect({}).to.be.empty;
+```
+
+由于 ```.empty``` 会根据不同的类型产生不同行为，所以在使用前确定目标类型十分重要。
+```
+expect([]).to.be.an('array').that.is.empty;
+```
+
+使用 ```.not``` 否定 ```.empty```。然而最好断言目标包含的值的数量，而不是断言它是否为空。
+```
+expect([1, 2, 3]).to.have.lengthOf(3); // Recommended
+expect([1, 2, 3]).to.not.be.empty; // Not recommended
+
+expect(new Set([1, 2, 3])).to.have.property('size', 3); // Recommended
+expect(new Set([1, 2, 3])).to.not.be.empty; // Not recommended
+
+expect(Object.keys({a: 1})).to.have.lengthOf(1); // Recommended
+expect({a: 1}).to.not.be.empty; // Not recommended
+```
+
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect([1, 2, 3], 'nooo why fail??').to.be.empty;
+```
+
+### .arguments
+
+断言目标是一个 ```arguments``` 对象。
+```
+function test () {
+  expect(arguments).to.be.arguments;
+}
+
+test();
+```
+可以使用 ```.not``` 否定判断。然而，最好断言目标为期望类型，而不是断言目标不是 ```arguments```。
+```
+expect('foo').to.be.a('string'); // Recommended
+expect('foo').to.not.be.arguments; // Not recommended
+```
+自定义错误消息可以作为 ```expect``` 的第二参数。
+```
+expect({}, 'nooo why fail??').to.be.arguments;
+```
+
+作为别名 ```.Arguments``` 可以替换 ```.arguments```。
+
+### .equal(val[, msg])
+
++ @param { Mixed } val
++ @param { String } msg _optional_
+
+判断目标是否严格等于（===）给定值 ```val```。
+```
+expect(1).to.equal(1);
+expect('foo').to.equal('foo');
+```
+使用 ```.deep``` 后表示深度等于（==）。
+```
+// Target object deeply (but not strictly) equals `{a: 1}`
+expect({a: 1}).to.deep.equal({a: 1});
+expect({a: 1}).to.not.equal({a: 1});
+
+// Target array deeply (but not strictly) equals `[1, 2]`
+expect([1, 2]).to.deep.equal([1, 2]);
+expect([1, 2]).to.not.equal([1, 2]);
+```
+
+使用 ```.not``` 进行否定断言。最好断言目标等于它的期望值，而不是断言不等于众多不期望值中的一个。
+```
+expect(1).to.equal(1); // Recommended
+expect(1).to.not.equal(2); // Not recommended
+```
+```.equal``` 接受可选参数 ```msg``` 用于断言失败时展示消息。
+```
+expect(1).to.equal(2, 'nooo why fail??');
+expect(1, 'nooo why fail??').to.equal(2);
+```
+作为别名 ```.eq``` 可以替换 ```.equal```。
+
+### .eql(obj[, msg])
+
++ @param { Mixed } obj
++ @param { String } msg _optional_
+
+断言目标是否深度等于所给对象 ```obj```。
+```
+// Target object is deeply (but not strictly) equal to {a: 1}
+expect({a: 1}).to.eql({a: 1}).but.not.equal({a: 1});
+
+// Target array is deeply (but not strictly) equal to [1, 2]
+expect([1, 2]).to.eql([1, 2]).but.not.equal([1, 2]);
+```
+
+使用 ```.not``` 进行否定断言。最好断言目标等于它的期望值，而不是断言不等于众多不期望值中的一个。
+```
+expect({a: 1}).to.eql({a: 1}); // Recommended
+expect({a: 1}).to.not.eql({b: 2}); // Not recommended
+```
+
+```.equal``` 接受可选参数 ```msg``` 用于断言失败时展示消息。
+```
+expect({a: 1}).to.eql({b: 2}, 'nooo why fail??');
+expect({a: 1}, 'nooo why fail??').to.eql({b: 2});
+```
+
+```.eqls``` 可与 ```.eql``` 相互替换。
+
+```.deep.equal``` 基本等同于 ```.eql``` 但有一点不同：```.deep.equal``` 会引起位于其后的其他断言也采用深度比较。
+```
+expect({a: 1}).to.deep.equal({a: 1}).but.not.equal({a: 1});
+```
+
+### .above(n[, msg])
+
++ @param { Number } n
++ @param { String } msg _optional_
+
+判定 number 或 date 类型的目标是否大于给定 number 或 date。然而尽可能的去判断目标是否等于期望值。
+```
+expect(2).to.equal(2); // Recommended
+expect(2).to.be.above(1); // Not recommended
+```
+
+在之前添加 ```.lengthOf``` 来判定目标的 ```length``` 属性是否大于所给值 ```n```。
+```
+expect('foo').to.have.lengthOf(3); // Recommended
+expect('foo').to.have.lengthOf.above(2); // Not recommended
+
+expect([1, 2, 3]).to.have.lengthOf(3); // Recommended
+expect([1, 2, 3]).to.have.lengthOf.above(2); // Not recommended
+```
+
+使用 ```.not``` 进行否定。
+```
+expect(2).to.equal(2); // Recommended
+expect(1).to.not.be.above(2); // Not recommended
+```
+
+```.above``` 接受可选参数 ```msg``` 用于断言失败时展示消息。
+```
+expect(1).to.be.above(2, 'nooo why fail??');
+expect(1, 'nooo why fail??').to.be.above(2);
+```
+
+```.gt``` 和 ```.greatThan``` 为 ```.above``` 的别名。
+
+### .least(n[, msg])
+
++ @param { Number } n
++ @param { String } msg _optional_
+
+判定 number 或 date 类型的目标是否大于等于给定 number 或 date。然而尽可能的去判断目标是否等于期望值。
+```
+expect(2).to.equal(2); // Recommended
+expect(2).to.be.at.least(1); // Not recommended
+expect(2).to.be.at.least(2); // Not recommended
+```
+
+在之前添加 ```.lengthOf``` 来判定目标的 ```length``` 属性是否大于等于所给值 ```n```。
+```
+expect('foo').to.have.lengthOf(3); // Recommended
+expect('foo').to.have.lengthOf.at.least(2); // Not recommended
+
+expect([1, 2, 3]).to.have.lengthOf(3); // Recommended
+expect([1, 2, 3]).to.have.lengthOf.at.least(2); // Not recommended
+```
+
+使用 ```.not``` 进行否定。
+```
+expect(1).to.equal(1); // Recommended
+expect(1).to.not.be.at.least(2); // Not recommended
+```
+
+```.least``` 接受可选参数 ```msg``` 用于断言失败时展示消息。
+```
+expect(1).to.be.at.least(2, 'nooo why fail??');
+expect(1, 'nooo why fail??').to.be.at.least(2);
+```
+
+```.gte``` 为 ```.least``` 的别名。
