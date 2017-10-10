@@ -341,7 +341,7 @@ expect(false, 'nooo why fail??').to.be.true;
 ```
 expect(true).to.be.false;
 ```
-可以通过 ```.not``` 进行否定。最好断言目标等于期望值，而不是不等于 ```flase```。
+可以通过 ```.not``` 进行否定。最好断言目标等于期望值，而不是不等于 ```false```。
 ```
 expect(false).to.be.true; // Recommended
 expect(false).to.not.be.false; // Not recommended
