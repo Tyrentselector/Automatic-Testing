@@ -1,3 +1,3 @@
-# BDD行为驱动开发
+## BDD
 
 测试 glossary；
