@@ -31,7 +31,13 @@
     * [7.1 安装](chapter3/chai/install.md)
     * [7.2 断言风格](chapter3/chai/assertion-style.md)
     * [7.3 BDD 断言风格 API](chapter3/chai/assertion-api.md)
-* [7. TDD入门](chapter4/README.md)
-  * [7.1. 从需求到测试](chapter4/demand2test.md)
-  * [7.2. 第一个测试](chapter4/first_test.md)
+* [8. sinon](chapter3/sinon/README.md)
+  * [8.1. 安装](chapter3/sinon/install.md)
+* [9. 单元测试入门](chapter4/README.md)
+  * [9.1. 从需求到测试](chapter4/demand2test.md)
+  * [9.2. 第一个测试](chapter4/first_test.md)
+
+* [10. 端对端测试](chapter5/README.md)
+  * [10.1. 测试方法](chapter5/method.md)
+  * [10.2. nightwatch](chapter5/nightwatch.md)
 
